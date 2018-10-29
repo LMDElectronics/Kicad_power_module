@@ -48,6 +48,12 @@ K r res resistor
 F ~
 $ENDCMP
 #
+$CMP Screw_Terminal_01x02
+D Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)
+K screw terminal
+F ~
+$ENDCMP
+#
 $CMP UCC27517A
 D Power MOSFET driver
 $ENDCMP

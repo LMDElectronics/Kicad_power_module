@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Screw_Terminal_01x02 J?
-U 1 1 5BAFF67A
-P 900 950
-F 0 "J?" H 900 1050 50  0000 C CNN
-F 1 "Power connector" H 900 750 50  0000 C CNN
-F 2 "Cooler:TerminalBlock_bornier-2_P5.08mm" H 900 950 50  0001 C CNN
-F 3 "~" H 900 950 50  0001 C CNN
-	1    900  950 
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5BAFF73D
 P 1250 1700
@@ -43,16 +32,17 @@ L Device:Fuse F?
 U 1 1 5BAFF902
 P 1300 950
 F 0 "F?" V 1103 950 50  0000 C CNN
-F 1 "Fuse 8A" V 1194 950 50  0000 C CNN
-F 2 "" V 1230 950 50  0001 C CNN
-F 3 "~" H 1300 950 50  0001 C CNN
+F 1 "Fuse Holder" V 1194 950 50  0000 C CNN
+F 2 "Cooler:Fuseholder5x20_horiz_SemiClosed_Casing10x25mm" V 1230 950 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2175973.pdf?_ga=2.258012686.525084042.1540039739-1978019988.1540039739" H 1300 950 50  0001 C CNN
+F 4 "MC000830" V 1300 950 50  0001 C CNN "Part Number"
+F 5 "Multicomp" V 1300 950 50  0001 C CNN "Manufacturer"
+F 6 "2461161" V 1300 950 50  0001 C CNN "Farnell Part Number"
 	1    1300 950 
 	0    1    1    0   
 $EndComp
 Wire Wire Line
 	1100 950  1150 950 
-Wire Wire Line
-	1100 1050 1250 1050
 $Comp
 L power:+12V #PWR?
 U 1 1 5BAFFF1B
@@ -68,10 +58,13 @@ $Comp
 L Transistor_BJT:BC547 Q?
 U 1 1 5BB00559
 P 3700 1900
-F 0 "Q?" H 3891 1946 50  0000 L CNN
-F 1 "BC547" H 3891 1855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3900 1825 50  0001 L CIN
+F 0 "Q?" H 3875 1775 50  0000 L CNN
+F 1 "BC547" H 3875 1675 50  0000 L CNN
+F 2 "Cooler:TO-92_Inline_Narrow_Oval" H 3900 1825 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3700 1900 50  0001 L CNN
+F 4 "BC547B" H 3700 1900 50  0001 C CNN "Part Number"
+F 5 "Multicomp" H 3700 1900 50  0001 C CNN "Manufacturer"
+F 6 "1574381" H 3700 1900 50  0001 C CNN "Farnell Part Number"
 	1    3700 1900
 	1    0    0    -1  
 $EndComp
@@ -81,8 +74,11 @@ U 1 1 5BB00DB0
 P 3200 1350
 F 0 "D?" V 3154 1429 50  0000 L CNN
 F 1 "1N4004" V 3245 1429 50  0000 L CNN
-F 2 "" H 3200 1350 50  0001 C CNN
-F 3 "~" H 3200 1350 50  0001 C CNN
+F 2 "Cooler:D_DO-41_SOD81_P10.16mm_Horizontal" H 3200 1350 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/574765.pdf?_ga=2.196473768.525084042.1540039739-1978019988.1540039739" H 3200 1350 50  0001 C CNN
+F 4 "1N4004" V 3200 1350 50  0001 C CNN "Part Number"
+F 5 "Multicomp" V 3200 1350 50  0001 C CNN "Manufacturer"
+F 6 "9565027" V 3200 1350 50  0001 C CNN "Farnell Part Number"
 	1    3200 1350
 	0    1    1    0   
 $EndComp
@@ -103,15 +99,17 @@ U 1 1 5BB01C62
 P 4300 2400
 F 0 "D?" V 4325 2550 50  0000 R CNN
 F 1 "LED GREEN" V 4200 2825 50  0000 R CNN
-F 2 "" H 4300 2400 50  0001 C CNN
-F 3 "~" H 4300 2400 50  0001 C CNN
+F 2 "Cooler:LED_D5.0mm" H 4300 2400 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1853485.pdf?_ga=2.255250572.525084042.1540039739-1978019988.1540039739" H 4300 2400 50  0001 C CNN
+F 4 "L-7083CGDK" V 4300 2400 50  0001 C CNN "Part Number"
+F 5 "Kingbright" V 4300 2400 50  0001 C CNN "Manufacturer"
+F 6 "2449735" V 4300 2400 50  0001 C CNN "Farnell Part Number"
+F 7 "20 mA" V 4300 2400 50  0001 C CNN "MAX Current"
 	1    4300 2400
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	4300 2200 4300 2250
-Wire Wire Line
-	1250 1050 1250 1525
 $Comp
 L power:GND #PWR?
 U 1 1 5BB02058
@@ -154,21 +152,8 @@ Text GLabel 5000 1800 2    50   Input ~ 0
 VCC_POWER_MODULE
 Wire Wire Line
 	1700 1350 1800 1350
-$Comp
-L Relay:FINDER-41.52 K?
-U 1 1 5BB001F0
-P 4200 1300
-F 0 "K?" H 4950 1100 50  0000 R CNN
-F 1 "SCHRACK420012" H 5450 1200 50  0000 R CNN
-F 2 "Relay_THT:Relay_DPDT_Finder_40.52" H 5550 1270 50  0001 C CNN
-F 3 "http://gfinder.findernet.com/assets/Series/357/S41EN.pdf" H 4000 1300 50  0001 C CNN
-	1    4200 1300
-	1    0    0    1   
-$EndComp
 Wire Notes Line
 	550  550  550  1950
-Wire Wire Line
-	4900 2200 4900 2250
 $Comp
 L power:GND #PWR?
 U 1 1 5BB194E6
@@ -273,138 +258,24 @@ U 1 1 5BB3E7C9
 P 1700 1150
 F 0 "R?" H 1550 1200 50  0000 L CNN
 F 1 "100K" V 1700 1050 50  0000 L CNN
-F 2 "" V 1630 1150 50  0001 C CNN
-F 3 "~" V 1780 1150 50  0001 C CNN
-F 4 "SMD 0603" H 1850 1050 50  0001 C CNN "Type"
-F 5 "0.063 W" H 2050 1050 50  0001 C CNN "Power"
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1630 1150 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 1780 1150 50  0001 C CNN
+F 4 "THD" H 1850 1050 50  0001 C CNN "Type"
+F 5 "1/4 W" H 2050 1050 50  0001 C CNN "Power"
 F 6 "1%" H 2300 1050 50  0001 C CNN "Tolerance"
+F 7 "MF25 100K" H 1700 1150 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 1700 1150 50  0001 C CNN "Manufacturer"
+F 9 "9341129" H 1700 1150 50  0001 C CNN "Farnell Part Number"
 	1    1700 1150
 	1    0    0    -1  
 $EndComp
-$Comp
-L cooler:R R?
-U 1 1 5BB3EB3C
-P 1700 1500
-F 0 "R?" H 1550 1550 50  0000 L CNN
-F 1 "12K" V 1700 1425 50  0000 L CNN
-F 2 "" V 1630 1500 50  0001 C CNN
-F 3 "~" V 1780 1500 50  0001 C CNN
-F 4 "SMD 0603" H 1850 1400 50  0001 C CNN "Type"
-F 5 "0.063 W" H 2050 1400 50  0001 C CNN "Power"
-F 6 "1%" H 2300 1400 50  0001 C CNN "Tolerance"
-	1    1700 1500
-	1    0    0    -1  
-$EndComp
 Connection ~ 1700 1350
-$Comp
-L cooler:R R?
-U 1 1 5BB3EED5
-P 3300 1900
-F 0 "R?" V 3200 1825 50  0000 L CNN
-F 1 "5K6" V 3300 1825 50  0000 L CNN
-F 2 "" V 3230 1900 50  0001 C CNN
-F 3 "~" V 3380 1900 50  0001 C CNN
-F 4 "SMD 0603" H 3450 1800 50  0001 C CNN "Type"
-F 5 "0.063 W" H 3650 1800 50  0001 C CNN "Power"
-F 6 "1%" H 3900 1800 50  0001 C CNN "Tolerance"
-	1    3300 1900
-	0    1    1    0   
-$EndComp
-$Comp
-L cooler:R R?
-U 1 1 5BB3F10A
-P 3500 2150
-F 0 "R?" H 3575 2100 50  0000 L CNN
-F 1 "10K" V 3500 2075 50  0000 L CNN
-F 2 "" V 3430 2150 50  0001 C CNN
-F 3 "~" V 3580 2150 50  0001 C CNN
-F 4 "SMD 0603" H 3650 2050 50  0001 C CNN "Type"
-F 5 "0.063 W" H 3850 2050 50  0001 C CNN "Power"
-F 6 "1%" H 4100 2050 50  0001 C CNN "Tolerance"
-	1    3500 2150
-	-1   0    0    1   
-$EndComp
-$Comp
-L cooler:R R?
-U 1 1 5BB3F346
-P 4300 2050
-F 0 "R?" H 4370 2096 50  0000 L CNN
-F 1 "3K3" V 4300 1975 50  0000 L CNN
-F 2 "" V 4230 2050 50  0001 C CNN
-F 3 "~" V 4380 2050 50  0001 C CNN
-F 4 "SMD 0603" H 4450 1950 50  0001 C CNN "Type"
-F 5 "0.063 W" H 4650 1950 50  0001 C CNN "Power"
-F 6 "1%" H 4900 1950 50  0001 C CNN "Tolerance"
-	1    4300 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L cooler:R R?
-U 1 1 5BB3F3D6
-P 4900 2050
-F 0 "R?" H 4750 2125 50  0000 L CNN
-F 1 "100K" V 4900 1950 50  0000 L CNN
-F 2 "" V 4830 2050 50  0001 C CNN
-F 3 "~" V 4980 2050 50  0001 C CNN
-F 4 "SMD 0603" H 5050 1950 50  0001 C CNN "Type"
-F 5 "0.063 W" H 5250 1950 50  0001 C CNN "Power"
-F 6 "1%" H 5500 1950 50  0001 C CNN "Tolerance"
-	1    4900 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L cooler:R R?
-U 1 1 5BB3F436
-P 4900 2400
-F 0 "R?" H 4750 2475 50  0000 L CNN
-F 1 "12K" V 4900 2325 50  0000 L CNN
-F 2 "" V 4830 2400 50  0001 C CNN
-F 3 "~" V 4980 2400 50  0001 C CNN
-F 4 "SMD 0603" H 5050 2300 50  0001 C CNN "Type"
-F 5 "0.063 W" H 5250 2300 50  0001 C CNN "Power"
-F 6 "1%" H 5500 2300 50  0001 C CNN "Tolerance"
-	1    4900 2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q?
-U 1 1 5BBA6D94
-P 7125 1900
-F 0 "Q?" H 7325 1975 50  0000 L CNN
-F 1 "BC547" H 7325 1875 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7325 1825 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 7125 1900 50  0001 L CNN
-	1    7125 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D D?
-U 1 1 5BBA6D9B
-P 6625 1350
-F 0 "D?" V 6579 1429 50  0000 L CNN
-F 1 "1N4004" V 6670 1429 50  0000 L CNN
-F 2 "" H 6625 1350 50  0001 C CNN
-F 3 "~" H 6625 1350 50  0001 C CNN
-	1    6625 1350
-	0    1    1    0   
-$EndComp
 Text GLabel 6525 1900 0    50   Input ~ 0
 COLD_HOT
 Wire Wire Line
 	6525 1900 6575 1900
 Wire Wire Line
 	6875 1900 6925 1900
-$Comp
-L Relay:FINDER-41.52 K?
-U 1 1 5BBA6DBB
-P 7625 1300
-F 0 "K?" H 8375 1100 50  0000 R CNN
-F 1 "SCHRACK420012" H 8875 1200 50  0000 R CNN
-F 2 "Relay_THT:Relay_DPDT_Finder_40.52" H 8975 1270 50  0001 C CNN
-F 3 "http://gfinder.findernet.com/assets/Series/357/S41EN.pdf" H 7425 1300 50  0001 C CNN
-	1    7625 1300
-	1    0    0    1   
-$EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5BBA6DCA
@@ -438,7 +309,6 @@ Wire Wire Line
 	7225 1650 7225 1700
 Wire Wire Line
 	6925 2000 6925 1900
-Connection ~ 6925 1900
 $Comp
 L power:GND #PWR?
 U 1 1 5BBA6DED
@@ -465,34 +335,6 @@ F 3 "" H 6225 1300 50  0001 C CNN
 	1    6225 1300
 	1    0    0    -1  
 $EndComp
-$Comp
-L cooler:R R?
-U 1 1 5BBA6E06
-P 6725 1900
-F 0 "R?" V 6625 1825 50  0000 L CNN
-F 1 "5K6" V 6725 1825 50  0000 L CNN
-F 2 "" V 6655 1900 50  0001 C CNN
-F 3 "~" V 6805 1900 50  0001 C CNN
-F 4 "SMD 0603" H 6875 1800 50  0001 C CNN "Type"
-F 5 "0.063 W" H 7075 1800 50  0001 C CNN "Power"
-F 6 "1%" H 7325 1800 50  0001 C CNN "Tolerance"
-	1    6725 1900
-	0    1    1    0   
-$EndComp
-$Comp
-L cooler:R R?
-U 1 1 5BBA6E10
-P 6925 2150
-F 0 "R?" H 7000 2100 50  0000 L CNN
-F 1 "10K" V 6925 2075 50  0000 L CNN
-F 2 "" V 6855 2150 50  0001 C CNN
-F 3 "~" V 7005 2150 50  0001 C CNN
-F 4 "SMD 0603" H 7075 2050 50  0001 C CNN "Type"
-F 5 "0.063 W" H 7275 2050 50  0001 C CNN "Power"
-F 6 "1%" H 7525 2050 50  0001 C CNN "Tolerance"
-	1    6925 2150
-	-1   0    0    1   
-$EndComp
 Text GLabel 8275 875  2    50   Input ~ 0
 TEC_HIGH_SIDE
 Text GLabel 8300 1000 2    50   Input ~ 0
@@ -514,8 +356,8 @@ U 1 1 5BBBE8BC
 P 1375 2525
 F 0 "J?" H 1325 2825 50  0000 C CNN
 F 1 "Conn_02x05_Male" H 1350 2225 50  0000 C CNN
-F 2 "" H 1375 2525 50  0001 C CNN
-F 3 "~" H 1375 2525 50  0001 C CNN
+F 2 "Cooler:Multicomp_MC9A12-1034_2x05x2.54mm_Straight" H 1375 2525 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1624901.pdf?_ga=2.154652860.525084042.1540039739-1978019988.1540039739" H 1375 2525 50  0001 C CNN
 	1    1375 2525
 	1    0    0    -1  
 $EndComp
@@ -576,34 +418,6 @@ F 3 "" H 7875 2600 50  0001 C CNN
 	1    7875 2600
 	1    0    0    -1  
 $EndComp
-$Comp
-L cooler:R R?
-U 1 1 5BBC8107
-P 7875 2100
-F 0 "R?" H 7725 2175 50  0000 L CNN
-F 1 "100K" V 7875 2000 50  0000 L CNN
-F 2 "" V 7805 2100 50  0001 C CNN
-F 3 "~" V 7955 2100 50  0001 C CNN
-F 4 "SMD 0603" H 8025 2000 50  0001 C CNN "Type"
-F 5 "0.063 W" H 8225 2000 50  0001 C CNN "Power"
-F 6 "1%" H 8475 2000 50  0001 C CNN "Tolerance"
-	1    7875 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L cooler:R R?
-U 1 1 5BBC8111
-P 7875 2425
-F 0 "R?" H 7725 2500 50  0000 L CNN
-F 1 "12K" V 7875 2350 50  0000 L CNN
-F 2 "" V 7805 2425 50  0001 C CNN
-F 3 "~" V 7955 2425 50  0001 C CNN
-F 4 "SMD 0603" H 8025 2325 50  0001 C CNN "Type"
-F 5 "0.063 W" H 8225 2325 50  0001 C CNN "Power"
-F 6 "1%" H 8475 2325 50  0001 C CNN "Tolerance"
-	1    7875 2425
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7875 2250 7875 2275
 Wire Notes Line
@@ -651,9 +465,12 @@ L Transistor_FET:IRF540N Q?
 U 1 1 5BBE7F57
 P 6150 4225
 F 0 "Q?" H 6355 4271 50  0000 L CNN
-F 1 "IRF540N" H 6355 4180 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6400 4150 50  0001 L CIN
+F 1 "STP60NF06" H 6355 4180 50  0000 L CNN
+F 2 "Cooler:TO-220-3_Vertical" H 6400 4150 50  0001 L CIN
 F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 6150 4225 50  0001 L CNN
+F 4 "STP60NF06" H 6150 4225 50  0001 C CNN "Part Number"
+F 5 "ST" H 6150 4225 50  0001 C CNN "Manufacturer"
+F 6 "9803262" H 6150 4225 50  0001 C CNN "Farnell Part Number"
 	1    6150 4225
 	1    0    0    -1  
 $EndComp
@@ -664,41 +481,16 @@ P 4700 4375
 F 0 "U?" H 4550 4625 50  0000 C CNN
 F 1 "UCC27517A" H 4700 4125 50  0000 C CNN
 F 2 "" H 4700 4325 50  0001 C CNN
-F 3 "" H 4700 4325 50  0001 C CNN
-F 4 "SOT-23" H 4750 4625 50  0001 C CNN "Type"
+F 3 "http://www.ti.com/lit/ds/symlink/ucc27517.pdf" H 4700 4325 50  0001 C CNN
+F 4 "SOT-23-5" H 4750 4625 50  0001 C CNN "Type"
+F 5 "UCC27517" H 4700 4375 50  0001 C CNN "Part Number"
+F 6 "TI" H 4700 4375 50  0001 C CNN "Manufacturer"
+F 7 "2437955" H 4700 4375 50  0001 C CNN "Farnell Part Number"
 	1    4700 4375
 	1    0    0    -1  
 $EndComp
-$Comp
-L cooler:R R?
-U 1 1 5BC00963
-P 5200 4225
-F 0 "R?" V 5275 4225 50  0000 L CNN
-F 1 "R" V 5200 4200 50  0000 L CNN
-F 2 "" V 5130 4225 50  0001 C CNN
-F 3 "~" V 5280 4225 50  0001 C CNN
-F 4 "SMD 0603" H 5350 4125 50  0001 C CNN "Type"
-F 5 "0.063 W" H 5550 4125 50  0001 C CNN "Power"
-F 6 "1%" H 5800 4125 50  0001 C CNN "Tolerance"
-	1    5200 4225
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	5000 4225 5050 4225
-$Comp
-L cooler:R R?
-U 1 1 5BC0EF0E
-P 5400 4375
-F 0 "R?" H 5450 4325 50  0000 L CNN
-F 1 "100K" V 5400 4275 50  0000 L CNN
-F 2 "" V 5330 4375 50  0001 C CNN
-F 3 "~" V 5480 4375 50  0001 C CNN
-F 4 "SMD 0603" H 5550 4275 50  0001 C CNN "Type"
-F 5 "0.063 W" H 5750 4275 50  0001 C CNN "Power"
-F 6 "1%" H 6000 4275 50  0001 C CNN "Tolerance"
-	1    5400 4375
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	5350 4225 5400 4225
 $Comp
@@ -715,7 +507,7 @@ $EndComp
 Wire Wire Line
 	5400 4525 5400 4575
 Connection ~ 5400 4225
-Text GLabel 3450 3325 0    50   Input ~ 0
+Text GLabel 3400 3325 0    50   Input ~ 0
 VCC_POWER_MODULE
 $Comp
 L power:GND #PWR?
@@ -733,23 +525,23 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 5BC34EFF
-P 3725 3675
-F 0 "#PWR?" H 3725 3425 50  0001 C CNN
-F 1 "GND" H 3730 3502 50  0000 C CNN
-F 2 "" H 3725 3675 50  0001 C CNN
-F 3 "" H 3725 3675 50  0001 C CNN
-	1    3725 3675
+P 3550 3675
+F 0 "#PWR?" H 3550 3425 50  0001 C CNN
+F 1 "GND" H 3555 3502 50  0000 C CNN
+F 2 "" H 3550 3675 50  0001 C CNN
+F 3 "" H 3550 3675 50  0001 C CNN
+	1    3550 3675
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5BC34FB9
-P 4050 3675
-F 0 "#PWR?" H 4050 3425 50  0001 C CNN
-F 1 "GND" H 4055 3502 50  0000 C CNN
-F 2 "" H 4050 3675 50  0001 C CNN
-F 3 "" H 4050 3675 50  0001 C CNN
-	1    4050 3675
+P 4100 3675
+F 0 "#PWR?" H 4100 3425 50  0001 C CNN
+F 1 "GND" H 4105 3502 50  0000 C CNN
+F 2 "" H 4100 3675 50  0001 C CNN
+F 3 "" H 4100 3675 50  0001 C CNN
+	1    4100 3675
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -771,30 +563,19 @@ Connection ~ 4400 4525
 $Comp
 L cooler:CP C?
 U 1 1 5BC41886
-P 3725 3475
-F 0 "C?" H 3843 3521 50  0000 L CNN
-F 1 "CP" H 3843 3430 50  0000 L CNN
-F 2 "" H 3763 3325 50  0001 C CNN
-F 3 "~" H 3725 3475 50  0001 C CNN
-F 4 "10V" H 3925 3575 50  0001 C CNN "Voltage"
-F 5 "20%" H 3925 3475 50  0001 C CNN "Tolerance"
-F 6 "X7R" H 3925 3375 50  0001 C CNN "Dielectric type"
-	1    3725 3475
-	1    0    0    -1  
-$EndComp
-$Comp
-L cooler:C C?
-U 1 1 5BC41C2F
-P 6225 1100
-F 0 "C?" H 6340 1146 50  0000 L CNN
-F 1 "100nF" H 6340 1055 50  0000 L CNN
-F 2 "" H 6263 950 50  0001 C CNN
-F 3 "~" H 6225 1100 50  0001 C CNN
-F 4 "SMD" H 6325 900 50  0001 C CNN "Type"
-F 5 "100V" H 6525 900 50  0001 C CNN "Voltage"
-F 6 "1%" H 6725 900 50  0001 C CNN "Tolerance"
-F 7 "X7R" H 6875 900 50  0001 C CNN "Dielectric type"
-	1    6225 1100
+P 3550 3475
+F 0 "C?" H 3600 3575 50  0000 L CNN
+F 1 "10uF" H 3575 3375 50  0000 L CNN
+F 2 "Cooler:CP_Tantalum_Case-B_EIA-3528-21_Reflow" H 3588 3325 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2045658.pdf?_ga=2.232798746.525084042.1540039739-1978019988.1540039739" H 3550 3475 50  0001 C CNN
+F 4 "SMD" H 3550 3475 50  0001 C CNN "Type"
+F 5 "25V" H 3750 3575 50  0001 C CNN "Voltage"
+F 6 "10%" H 3750 3475 50  0001 C CNN "Tolerance"
+F 7 "tantalium" H 3750 3375 50  0001 C CNN "Dielectric type"
+F 8 "293D106X9025B2TE3" H 3550 3475 50  0001 C CNN "Part Number"
+F 9 "Vishay" H 3550 3475 50  0001 C CNN "Manufacturer"
+F 10 "2353056" H 3550 3475 50  0001 C CNN "Farnell Part Number"
+	1    3550 3475
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -803,54 +584,24 @@ U 1 1 5BC41D34
 P 2800 1100
 F 0 "C?" H 2915 1146 50  0000 L CNN
 F 1 "100nF" H 2915 1055 50  0000 L CNN
-F 2 "" H 2838 950 50  0001 C CNN
-F 3 "~" H 2800 1100 50  0001 C CNN
-F 4 "SMD" H 2900 900 50  0001 C CNN "Type"
+F 2 "Cooler:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 2838 950 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2243519.pdf?_ga=2.254736140.525084042.1540039739-1978019988.1540039739" H 2800 1100 50  0001 C CNN
+F 4 "TH" H 2900 900 50  0001 C CNN "Type"
 F 5 "100V" H 3100 900 50  0001 C CNN "Voltage"
-F 6 "1%" H 3300 900 50  0001 C CNN "Tolerance"
+F 6 "10%" H 3300 900 50  0001 C CNN "Tolerance"
 F 7 "X7R" H 3450 900 50  0001 C CNN "Dielectric type"
+F 8 "K104K15X7RF53H5" H 2800 1100 50  0001 C CNN "Part Number"
+F 9 "Vishay" H 2800 1100 50  0001 C CNN "Manufacturer"
+F 10 "1141777" H 2800 1100 50  0001 C CNN "Farnell Part Number"
 	1    2800 1100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6225 1250 6225 1300
-$Comp
-L cooler:CP C?
-U 1 1 5BC4BC68
-P 4625 3475
-F 0 "C?" H 4743 3521 50  0000 L CNN
-F 1 "CP" H 4743 3430 50  0000 L CNN
-F 2 "" H 4663 3325 50  0001 C CNN
-F 3 "~" H 4625 3475 50  0001 C CNN
-F 4 "10V" H 4825 3575 50  0001 C CNN "Voltage"
-F 5 "20%" H 4825 3475 50  0001 C CNN "Tolerance"
-F 6 "X7R" H 4825 3375 50  0001 C CNN "Dielectric type"
-	1    4625 3475
-	1    0    0    -1  
-$EndComp
-$Comp
-L cooler:C C?
-U 1 1 5BC42705
-P 4050 3475
-F 0 "C?" H 4165 3521 50  0000 L CNN
-F 1 "C" H 4165 3430 50  0000 L CNN
-F 2 "" H 4088 3325 50  0001 C CNN
-F 3 "~" H 4050 3475 50  0001 C CNN
-F 4 "SMD" H 4150 3275 50  0001 C CNN "Type"
-F 5 "100V" H 4350 3275 50  0001 C CNN "Voltage"
-F 6 "1%" H 4550 3275 50  0001 C CNN "Tolerance"
-F 7 "X7R" H 4700 3275 50  0001 C CNN "Dielectric type"
-	1    4050 3475
-	1    0    0    -1  
-$EndComp
-Connection ~ 4050 3325
-Connection ~ 3725 3325
 Wire Wire Line
-	3725 3325 4050 3325
+	3550 3625 3550 3675
 Wire Wire Line
-	3725 3625 3725 3675
-Wire Wire Line
-	4050 3625 4050 3675
+	4100 3625 4100 3675
 $Comp
 L power:GND #PWR?
 U 1 1 5BC5F5B4
@@ -862,49 +613,14 @@ F 3 "" H 4625 3650 50  0001 C CNN
 	1    4625 3650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3450 3325 3725 3325
 Wire Notes Line
-	3525 3250 3525 3900
+	3425 3250 3425 3900
 Wire Notes Line
 	4300 3900 4300 3250
 Text Notes 3500 3225 0    50   ~ 0
 CLOSER TO UCC27517 \nVDD AND GND
-Wire Notes Line
-	3525 3250 4300 3250
-Wire Notes Line
-	3525 3900 4300 3900
 Text Notes 4525 3225 0    50   ~ 0
 CLOSER TO \nLOAD
-$Comp
-L cooler:R R?
-U 1 1 5BC81E9D
-P 5675 3825
-F 0 "R?" V 5775 3850 50  0000 L CNN
-F 1 "100" V 5675 3750 50  0000 L CNN
-F 2 "" V 5605 3825 50  0001 C CNN
-F 3 "~" V 5755 3825 50  0001 C CNN
-F 4 "SMD 0603" H 5825 3725 50  0001 C CNN "Type"
-F 5 "0.063 W" H 6025 3725 50  0001 C CNN "Power"
-F 6 "1%" H 6275 3725 50  0001 C CNN "Tolerance"
-	1    5675 3825
-	0    -1   -1   0   
-$EndComp
-$Comp
-L cooler:C C?
-U 1 1 5BC81F10
-P 5325 3825
-F 0 "C?" V 5175 3825 50  0000 C CNN
-F 1 "10nF" V 5450 3825 50  0000 C CNN
-F 2 "" H 5363 3675 50  0001 C CNN
-F 3 "~" H 5325 3825 50  0001 C CNN
-F 4 "SMD" H 5425 3625 50  0001 C CNN "Type"
-F 5 "100V" H 5625 3625 50  0001 C CNN "Voltage"
-F 6 "1%" H 5825 3625 50  0001 C CNN "Tolerance"
-F 7 "X7R" H 5975 3625 50  0001 C CNN "Dielectric type"
-	1    5325 3825
-	0    1    1    0   
-$EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5BC8200E
@@ -932,20 +648,6 @@ DCDC_HIGH_SIDE
 Text GLabel 7225 3825 2    50   Input ~ 0
 DCDC_LOW_SIDE
 $Comp
-L cooler:CP C?
-U 1 1 5BCA0610
-P 7050 4150
-F 0 "C?" H 7168 4196 50  0000 L CNN
-F 1 "CP" H 7168 4105 50  0000 L CNN
-F 2 "" H 7088 4000 50  0001 C CNN
-F 3 "~" H 7050 4150 50  0001 C CNN
-F 4 "10V" H 7250 4250 50  0001 C CNN "Voltage"
-F 5 "20%" H 7250 4150 50  0001 C CNN "Tolerance"
-F 6 "X7R" H 7250 4050 50  0001 C CNN "Dielectric type"
-	1    7050 4150
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5BCA38CA
 P 7050 4575
@@ -956,16 +658,17 @@ F 3 "" H 7050 4575 50  0001 C CNN
 	1    7050 4575
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4050 3325 4400 3325
 $Comp
 L Device:D D?
 U 1 1 5BC61FA8
 P 5825 3550
 F 0 "D?" V 5779 3629 50  0000 L CNN
 F 1 "MUR120" V 5870 3629 50  0000 L CNN
-F 2 "" H 5825 3550 50  0001 C CNN
-F 3 "~" H 5825 3550 50  0001 C CNN
+F 2 "Cooler:D_DO-41_SOD81_P10.16mm_Horizontal" H 5825 3550 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1748106.pdf?_ga=2.168266721.1986230214.1540489304-1550211954.1540489304" H 5825 3550 50  0001 C CNN
+F 4 "MUR120RLG" V 5825 3550 50  0001 C CNN "Part Number"
+F 5 "ON SEMICONDUCTOR" V 5825 3550 50  0001 C CNN "Manufacturer"
+F 6 "9557490" V 5825 3550 50  0001 C CNN "Farnell Part Number"
 	1    5825 3550
 	0    1    1    0   
 $EndComp
@@ -1012,7 +715,6 @@ Wire Wire Line
 	7925 1775 8800 1775
 Text GLabel 8050 2575 2    50   Output ~ 0
 COLD_HOT_READ_ADC
-Connection ~ 7875 2250
 Wire Wire Line
 	7225 1650 7425 1650
 Wire Wire Line
@@ -1021,21 +723,6 @@ Wire Wire Line
 	7425 1750 7650 1750
 Text GLabel 2950 4050 0    50   Input ~ 0
 PWM_IN
-$Comp
-L cooler:C C?
-U 1 1 5BC743BF
-P 4150 4200
-F 0 "C?" H 4100 4300 50  0000 C CNN
-F 1 "C" H 4100 4125 50  0000 C CNN
-F 2 "" H 4188 4050 50  0001 C CNN
-F 3 "~" H 4150 4200 50  0001 C CNN
-F 4 "SMD" H 4250 4000 50  0001 C CNN "Type"
-F 5 "100V" H 4450 4000 50  0001 C CNN "Voltage"
-F 6 "1%" H 4650 4000 50  0001 C CNN "Tolerance"
-F 7 "X7R" H 4800 4000 50  0001 C CNN "Dielectric type"
-	1    4150 4200
-	-1   0    0    1   
-$EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5BC77691
@@ -1053,9 +740,6 @@ Wire Wire Line
 	4350 4325 4400 4325
 Wire Wire Line
 	4150 4350 4150 4575
-Connection ~ 4150 4050
-Wire Wire Line
-	4150 4050 4350 4050
 Wire Notes Line
 	4300 4000 4300 4400
 Wire Notes Line
@@ -1066,9 +750,6 @@ Wire Notes Line
 	4000 4000 4300 4000
 Text Notes 3800 4000 0    50   ~ 0
 OPTIONAL LPF
-Connection ~ 4900 2250
-Wire Wire Line
-	4900 2250 5000 2250
 Wire Wire Line
 	7875 2575 7875 2600
 Wire Wire Line
@@ -1082,15 +763,13 @@ PWM_IN
 Wire Wire Line
 	1075 2625 1125 2625
 Text Notes 9725 875  0    50   ~ 0
-TODO LIST\n- test points\n- add fans\n- add connectors
+TODO LIST\n- ADD PART AND FOOTPRINTS FOR COIL\n- ADD MECHANICAL PARTS \n- ADD FIDUCIALS & HOLES
 Text Notes 1875 1575 0    50   ~ 0
 12V -> 1.28V
 Text Notes 5025 2525 0    50   ~ 0
 POWERED ON: 1.28V\nPOWERED OFF: 0V\n
 Text Notes 8050 2525 0    50   ~ 0
 COLD: 1.28V\nHOT: 0.2V\n
-Wire Wire Line
-	7875 2250 7975 2250
 Text Notes 2625 4200 0    50   ~ 0
 3.3V\n
 Text Notes 625  3200 0    50   ~ 0
@@ -1157,20 +836,6 @@ Connection ~ 1475 4000
 Wire Wire Line
 	4625 3625 4625 3650
 $Comp
-L cooler:CP C?
-U 1 1 5BD6D5F7
-P 4950 3475
-F 0 "C?" H 5068 3521 50  0000 L CNN
-F 1 "CP" H 5068 3430 50  0000 L CNN
-F 2 "" H 4988 3325 50  0001 C CNN
-F 3 "~" H 4950 3475 50  0001 C CNN
-F 4 "10V" H 5150 3575 50  0001 C CNN "Voltage"
-F 5 "20%" H 5150 3475 50  0001 C CNN "Tolerance"
-F 6 "X7R" H 5150 3375 50  0001 C CNN "Dielectric type"
-	1    4950 3475
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5BD6D5FE
 P 4950 3650
@@ -1183,44 +848,16 @@ F 3 "" H 4950 3650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4950 3625 4950 3650
-Connection ~ 4625 3325
-Wire Wire Line
-	4625 3325 4950 3325
-Connection ~ 4950 3325
 $Comp
 L cooler:Conn_01x02_Male J?
 U 1 1 5BC2DE9B
 P 675 3450
 F 0 "J?" H 675 3550 50  0000 C CNN
 F 1 "FAN 1" H 725 3250 50  0000 C CNN
-F 2 "Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 475 3050 50  0001 C CNN
-F 3 "~" H 675 3450 50  0001 C CNN
+F 2 "Cooler:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 475 3050 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eVH.pdf" H 675 3450 50  0001 C CNN
 F 4 "JST_Male_Vertical_1x2_3.96mm" H 775 3150 50  0001 C CNN "Type"
 	1    675  3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L cooler:Conn_01x02_Male J?
-U 1 1 5BC2E289
-P 675 4000
-F 0 "J?" H 675 4100 50  0000 C CNN
-F 1 "FAN 2" H 725 3800 50  0000 C CNN
-F 2 "Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 475 3600 50  0001 C CNN
-F 3 "~" H 675 4000 50  0001 C CNN
-F 4 "JST_Male_Vertical_1x2_3.96mm" H 775 3700 50  0001 C CNN "Type"
-	1    675  4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L cooler:Conn_01x02_Male J?
-U 1 1 5BC32513
-P 675 4450
-F 0 "J?" H 675 4550 50  0000 C CNN
-F 1 "FAN 3" H 725 4250 50  0000 C CNN
-F 2 "Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 475 4050 50  0001 C CNN
-F 3 "~" H 675 4450 50  0001 C CNN
-F 4 "JST_Male_Vertical_1x2_3.96mm" H 775 4150 50  0001 C CNN "Type"
-	1    675  4450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1246,30 +883,8 @@ Wire Wire Line
 	1625 2225 1625 2325
 Wire Wire Line
 	1625 2325 1575 2325
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5BC54121
-P 1900 950
-F 0 "TP?" H 1958 1070 50  0000 L CNN
-F 1 "TP_12V" H 1958 979 50  0000 L CNN
-F 2 "" H 2100 950 50  0001 C CNN
-F 3 "~" H 2100 950 50  0001 C CNN
-	1    1900 950 
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1700 950  1900 950 
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5BC58947
-P 1900 1350
-F 0 "TP?" H 1958 1470 50  0000 L CNN
-F 1 "TP_12V_ADC" H 1958 1379 50  0000 L CNN
-F 2 "" H 2100 1350 50  0001 C CNN
-F 3 "~" H 2100 1350 50  0001 C CNN
-	1    1900 1350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1800 1350 1800 1650
 Wire Wire Line
@@ -1283,8 +898,11 @@ U 1 1 5BC6B3DE
 P 900 1425
 F 0 "TP?" H 958 1545 50  0000 L CNN
 F 1 "TP_GND" H 958 1454 50  0000 L CNN
-F 2 "" H 1100 1425 50  0001 C CNN
-F 3 "~" H 1100 1425 50  0001 C CNN
+F 2 "Cooler:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded" H 1100 1425 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1969233.pdf?_ga=2.33043386.525084042.1540039739-1978019988.1540039739" H 1100 1425 50  0001 C CNN
+F 4 "5122" H 900 1425 50  0001 C CNN "Part Number"
+F 5 "Keystone" H 900 1425 50  0001 C CNN "Manufacturer"
+F 6 "2501307" H 900 1425 50  0001 C CNN "Farnell Part Number"
 	1    900  1425
 	1    0    0    -1  
 $EndComp
@@ -1295,66 +913,16 @@ Wire Wire Line
 Connection ~ 1250 1525
 Wire Wire Line
 	1250 1525 1250 1700
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5BC708B9
-P 4900 1650
-F 0 "TP?" H 4958 1770 50  0000 L CNN
-F 1 "TP_VCC_POWER" H 4958 1679 50  0000 L CNN
-F 2 "" H 5100 1650 50  0001 C CNN
-F 3 "~" H 5100 1650 50  0001 C CNN
-	1    4900 1650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4900 1650 4900 1800
 Wire Wire Line
 	5000 2250 5000 2600
 Wire Wire Line
 	5000 2600 5025 2600
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5BC7FDDF
-P 5075 2250
-F 0 "TP?" H 5133 2370 50  0000 L CNN
-F 1 "TP_VCC_POWER_ADC" H 5133 2279 50  0000 L CNN
-F 2 "" H 5275 2250 50  0001 C CNN
-F 3 "~" H 5275 2250 50  0001 C CNN
-	1    5075 2250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5000 2250 5075 2250
-Connection ~ 5000 2250
-Wire Wire Line
-	7975 2250 7975 2575
 Wire Wire Line
 	7975 2575 8050 2575
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5BC90FB3
-P 8050 2250
-F 0 "TP?" H 8108 2370 50  0000 L CNN
-F 1 "TP_COLD_HOT_READ" H 8108 2279 50  0000 L CNN
-F 2 "" H 8250 2250 50  0001 C CNN
-F 3 "~" H 8250 2250 50  0001 C CNN
-	1    8050 2250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7975 2250 8050 2250
-Connection ~ 7975 2250
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5BCABFAA
-P 6250 3650
-F 0 "TP?" H 6308 3770 50  0000 L CNN
-F 1 "TP_MOSFET_DRAIN" H 6308 3679 50  0000 L CNN
-F 2 "" H 6450 3650 50  0001 C CNN
-F 3 "~" H 6450 3650 50  0001 C CNN
-	1    6250 3650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6875 3825 7050 3825
 Wire Wire Line
@@ -1368,17 +936,6 @@ Wire Wire Line
 	5400 4225 5950 4225
 Wire Wire Line
 	6250 3825 6250 4025
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5BCDCB53
-P 5400 4200
-F 0 "TP?" H 5458 4320 50  0000 L CNN
-F 1 "TP_MOSFET_GATE" H 5458 4229 50  0000 L CNN
-F 2 "" H 5600 4200 50  0001 C CNN
-F 3 "~" H 5600 4200 50  0001 C CNN
-	1    5400 4200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5400 4200 5400 4225
 Wire Notes Line
@@ -1387,25 +944,9 @@ Wire Notes Line
 	8100 4825 8100 3025
 Wire Notes Line
 	2550 3025 8100 3025
-$Comp
-L cooler:R R?
-U 1 1 5BCF40A5
-P 3825 4225
-F 0 "R?" H 3875 4175 50  0000 L CNN
-F 1 "100K" V 3825 4125 50  0000 L CNN
-F 2 "" V 3755 4225 50  0001 C CNN
-F 3 "~" V 3905 4225 50  0001 C CNN
-F 4 "SMD 0603" H 3975 4125 50  0001 C CNN "Type"
-F 5 "0.063 W" H 4175 4125 50  0001 C CNN "Power"
-F 6 "1%" H 4425 4125 50  0001 C CNN "Tolerance"
-	1    3825 4225
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3825 4075 3825 4050
 Connection ~ 3825 4050
-Wire Wire Line
-	3825 4050 4150 4050
 $Comp
 L power:GND #PWR?
 U 1 1 5BCF99F1
@@ -1419,8 +960,6 @@ F 3 "" H 3825 4575 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3825 4375 3825 4575
-Wire Wire Line
-	4400 3325 4625 3325
 Connection ~ 4400 3325
 Wire Notes Line
 	5050 3575 5225 3575
@@ -1442,29 +981,11 @@ Wire Wire Line
 	5825 3700 5825 3825
 Wire Wire Line
 	6250 3825 5825 3825
-Connection ~ 5825 3825
 Wire Wire Line
 	5825 3325 5825 3400
 Wire Wire Line
-	4950 3325 5825 3325
-Wire Wire Line
 	5825 3325 7200 3325
 Connection ~ 5825 3325
-$Comp
-L Connector:Screw_Terminal_01x02 J?
-U 1 1 5BC6952E
-P 9250 3450
-F 0 "J?" H 9250 3550 50  0000 C CNN
-F 1 "TEC power connector" H 9150 3225 50  0000 C CNN
-F 2 "" H 9250 3450 50  0001 C CNN
-F 3 "~" H 9250 3450 50  0001 C CNN
-	1    9250 3450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8975 3450 9050 3450
-Wire Wire Line
-	8950 3550 9050 3550
 Wire Notes Line
 	8150 4825 9675 4825
 Wire Notes Line
@@ -1475,27 +996,8 @@ Wire Notes Line
 	8150 3025 8150 4825
 Text Notes 8200 3300 0    50   ~ 0
 COLD/HOT\nSELECTION\nRELAY
-$Comp
-L cooler:C C?
-U 1 1 5BC8FACA
-P 7575 2425
-F 0 "C?" H 7700 2525 50  0000 C CNN
-F 1 "C" H 7625 2325 50  0000 C CNN
-F 2 "" H 7613 2275 50  0001 C CNN
-F 3 "~" H 7575 2425 50  0001 C CNN
-F 4 "SMD" H 7675 2225 50  0001 C CNN "Type"
-F 5 "100V" H 7875 2225 50  0001 C CNN "Voltage"
-F 6 "1%" H 8075 2225 50  0001 C CNN "Tolerance"
-F 7 "X7R" H 8225 2225 50  0001 C CNN "Dielectric type"
-	1    7575 2425
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	7650 1950 7875 1950
-Wire Wire Line
-	7875 2250 7575 2250
-Wire Wire Line
-	7575 2250 7575 2275
 $Comp
 L power:GND #PWR?
 U 1 1 5BCA1DE1
@@ -1510,23 +1012,6 @@ $EndComp
 Wire Wire Line
 	7575 2575 7575 2600
 $Comp
-L cooler:C C?
-U 1 1 5BCA88BD
-P 4625 2400
-F 0 "C?" H 4750 2500 50  0000 C CNN
-F 1 "C" H 4675 2300 50  0000 C CNN
-F 2 "" H 4663 2250 50  0001 C CNN
-F 3 "~" H 4625 2400 50  0001 C CNN
-F 4 "SMD" H 4725 2200 50  0001 C CNN "Type"
-F 5 "100V" H 4925 2200 50  0001 C CNN "Voltage"
-F 6 "1%" H 5125 2200 50  0001 C CNN "Tolerance"
-F 7 "X7R" H 5275 2200 50  0001 C CNN "Dielectric type"
-	1    4625 2400
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4625 2250 4900 2250
-$Comp
 L power:GND #PWR?
 U 1 1 5BCAEDCC
 P 4625 2600
@@ -1537,20 +1022,21 @@ F 3 "" H 4625 2600 50  0001 C CNN
 	1    4625 2600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4625 2550 4625 2600
 $Comp
 L cooler:C C?
 U 1 1 5BCB54F1
 P 1475 1500
-F 0 "C?" H 1525 1600 50  0000 C CNN
-F 1 "C" H 1525 1400 50  0000 C CNN
-F 2 "" H 1513 1350 50  0001 C CNN
-F 3 "~" H 1475 1500 50  0001 C CNN
-F 4 "SMD" H 1575 1300 50  0001 C CNN "Type"
-F 5 "100V" H 1775 1300 50  0001 C CNN "Voltage"
-F 6 "1%" H 1975 1300 50  0001 C CNN "Tolerance"
-F 7 "X7R" H 2125 1300 50  0001 C CNN "Dielectric type"
+F 0 "C?" H 1525 1400 50  0000 C CNN
+F 1 "10nF" H 1575 1600 50  0000 C CNN
+F 2 "Cooler:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 1513 1350 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1884706.pdf?_ga=2.162413496.525084042.1540039739-1978019988.1540039739" H 1475 1500 50  0001 C CNN
+F 4 "TH" H 1575 1300 50  0001 C CNN "Type"
+F 5 "50V" H 1775 1300 50  0001 C CNN "Voltage"
+F 6 "20%" H 1975 1300 50  0001 C CNN "Tolerance"
+F 7 "Y5V" H 2125 1300 50  0001 C CNN "Dielectric type"
+F 8 "MC0805Y103M500A5.08MM" H 1475 1500 50  0001 C CNN "Part Number"
+F 9 "Multicomp" H 1475 1500 50  0001 C CNN "Manufacturer"
+F 10 "2309024" H 1475 1500 50  0001 C CNN "Farnell Part Number"
 	1    1475 1500
 	-1   0    0    1   
 $EndComp
@@ -1571,24 +1057,763 @@ Wire Wire Line
 	1475 1650 1475 1700
 Wire Wire Line
 	2950 4050 3075 4050
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5BCCA869
-P 3075 4000
-F 0 "TP?" H 3133 4120 50  0000 L CNN
-F 1 "TP_PWM_IN" H 3133 4029 50  0000 L CNN
-F 2 "" H 3275 4000 50  0001 C CNN
-F 3 "~" H 3275 4000 50  0001 C CNN
-	1    3075 4000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3075 4000 3075 4050
 Connection ~ 3075 4050
 Wire Wire Line
 	3075 4050 3825 4050
-Text GLabel 8950 3550 0    50   Input ~ 0
+Text GLabel 8775 3900 0    50   Input ~ 0
 TEC_LOW_SIDE
-Text GLabel 8975 3450 0    50   Input ~ 0
+Text GLabel 8800 3800 0    50   Input ~ 0
 TEC_HIGH_SIDE
+$Comp
+L cooler:Screw_Terminal_01x02 J?
+U 1 1 5BCC1DB2
+P 900 950
+F 0 "J?" H 925 1075 50  0000 C CNN
+F 1 "ScrewTerminal" H 875 725 50  0000 C CNN
+F 2 "Cooler:TerminalBlock_bornier-2_P5.08mm" H 1050 650 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1955144.pdf?_ga=2.188216492.525084042.1540039739-1978019988.1540039739" H 900 1050 50  0001 C CNN
+F 4 "CTB0102/2" H 900 950 50  0001 C CNN "Part Number"
+F 5 "Camdemboss" H 900 950 50  0001 C CNN "Manufacturer"
+F 6 "2493614" H 900 950 50  0001 C CNN "Farnell Part Number"
+	1    900  950 
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 1050 1100 1125
+Wire Wire Line
+	1100 1125 1250 1125
+Wire Wire Line
+	1250 1125 1250 1525
+Text Notes 900  650  0    50   ~ 0
+6A fuse (protect the TEC)\n
+$Comp
+L cooler:R R?
+U 1 1 5BCC2B1B
+P 1700 1500
+F 0 "R?" H 1550 1550 50  0000 L CNN
+F 1 "12K" V 1700 1425 50  0000 L CNN
+F 2 "Cooler:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1630 1500 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 1780 1500 50  0001 C CNN
+F 4 "THD" H 1850 1400 50  0001 C CNN "Type"
+F 5 "1/4 W" H 2050 1400 50  0001 C CNN "Power"
+F 6 "1%" H 2300 1400 50  0001 C CNN "Tolerance"
+F 7 "MF25 12K" H 1700 1500 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 1700 1500 50  0001 C CNN "Manufacturer"
+F 9 "9341234" H 1700 1500 50  0001 C CNN "Farnell Part Number"
+	1    1700 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L cooler:R R?
+U 1 1 5BCC5564
+P 4900 2050
+F 0 "R?" H 4750 2100 50  0000 L CNN
+F 1 "100K" V 4900 1950 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4830 2050 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 4980 2050 50  0001 C CNN
+F 4 "THD" H 5050 1950 50  0001 C CNN "Type"
+F 5 "1/4 W" H 5250 1950 50  0001 C CNN "Power"
+F 6 "1%" H 5500 1950 50  0001 C CNN "Tolerance"
+F 7 "MF25 100K" H 4900 2050 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 4900 2050 50  0001 C CNN "Manufacturer"
+F 9 "9341129" H 4900 2050 50  0001 C CNN "Farnell Part Number"
+	1    4900 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L cooler:R R?
+U 1 1 5BCC5581
+P 4900 2400
+F 0 "R?" H 4750 2450 50  0000 L CNN
+F 1 "12K" V 4900 2325 50  0000 L CNN
+F 2 "Cooler:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4830 2400 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 4980 2400 50  0001 C CNN
+F 4 "THD" H 5050 2300 50  0001 C CNN "Type"
+F 5 "1/4 W" H 5250 2300 50  0001 C CNN "Power"
+F 6 "1%" H 5500 2300 50  0001 C CNN "Tolerance"
+F 7 "MF25 12K" H 4900 2400 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 4900 2400 50  0001 C CNN "Manufacturer"
+F 9 "9341234" H 4900 2400 50  0001 C CNN "Farnell Part Number"
+	1    4900 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 2200 4900 2250
+Wire Wire Line
+	5000 2250 4900 2250
+Connection ~ 5000 2250
+Connection ~ 4900 2250
+Wire Wire Line
+	4900 2250 4625 2250
+Wire Wire Line
+	4625 2550 4625 2600
+Wire Wire Line
+	7575 2275 7875 2275
+Connection ~ 7875 2275
+Wire Wire Line
+	7875 2275 7975 2275
+Wire Wire Line
+	8050 2275 8050 2250
+Wire Wire Line
+	7975 2575 7975 2275
+Connection ~ 7975 2275
+Wire Wire Line
+	7975 2275 8050 2275
+$Comp
+L cooler:R R?
+U 1 1 5BD044AE
+P 3825 4225
+F 0 "R?" H 3675 4275 50  0000 L CNN
+F 1 "100K" V 3825 4125 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3755 4225 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 3905 4225 50  0001 C CNN
+F 4 "THD" H 3975 4125 50  0001 C CNN "Type"
+F 5 "1/4 W" H 4175 4125 50  0001 C CNN "Power"
+F 6 "1%" H 4425 4125 50  0001 C CNN "Tolerance"
+F 7 "MF25 100K" H 3825 4225 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 3825 4225 50  0001 C CNN "Manufacturer"
+F 9 "9341129" H 3825 4225 50  0001 C CNN "Farnell Part Number"
+	1    3825 4225
+	1    0    0    -1  
+$EndComp
+$Comp
+L cooler:R R?
+U 1 1 5BD04657
+P 5400 4375
+F 0 "R?" H 5250 4425 50  0000 L CNN
+F 1 "100K" V 5400 4275 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5330 4375 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 5480 4375 50  0001 C CNN
+F 4 "THD" H 5550 4275 50  0001 C CNN "Type"
+F 5 "1/4 W" H 5750 4275 50  0001 C CNN "Power"
+F 6 "1%" H 6000 4275 50  0001 C CNN "Tolerance"
+F 7 "MF25 100K" H 5400 4375 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 5400 4375 50  0001 C CNN "Manufacturer"
+F 9 "9341129" H 5400 4375 50  0001 C CNN "Farnell Part Number"
+	1    5400 4375
+	1    0    0    -1  
+$EndComp
+$Comp
+L cooler:C C?
+U 1 1 5BD053FF
+P 4625 2400
+F 0 "C?" H 4675 2300 50  0000 C CNN
+F 1 "10nF" H 4725 2500 50  0000 C CNN
+F 2 "Cooler:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 4663 2250 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1884706.pdf?_ga=2.162413496.525084042.1540039739-1978019988.1540039739" H 4625 2400 50  0001 C CNN
+F 4 "TH" H 4725 2200 50  0001 C CNN "Type"
+F 5 "50V" H 4925 2200 50  0001 C CNN "Voltage"
+F 6 "20%" H 5125 2200 50  0001 C CNN "Tolerance"
+F 7 "Y5V" H 5275 2200 50  0001 C CNN "Dielectric type"
+F 8 "MC0805Y103M500A5.08MM" H 4625 2400 50  0001 C CNN "Part Number"
+F 9 "Multicomp" H 4625 2400 50  0001 C CNN "Manufacturer"
+F 10 "2309024" H 4625 2400 50  0001 C CNN "Farnell Part Number"
+	1    4625 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L cooler:C C?
+U 1 1 5BD05E89
+P 6225 1100
+F 0 "C?" H 6340 1146 50  0000 L CNN
+F 1 "100nF" H 6340 1055 50  0000 L CNN
+F 2 "Cooler:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 6263 950 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2243519.pdf?_ga=2.254736140.525084042.1540039739-1978019988.1540039739" H 6225 1100 50  0001 C CNN
+F 4 "TH" H 6325 900 50  0001 C CNN "Type"
+F 5 "100V" H 6525 900 50  0001 C CNN "Voltage"
+F 6 "10%" H 6725 900 50  0001 C CNN "Tolerance"
+F 7 "X7R" H 6875 900 50  0001 C CNN "Dielectric type"
+F 8 "K104K15X7RF53H5" H 6225 1100 50  0001 C CNN "Part Number"
+F 9 "Vishay" H 6225 1100 50  0001 C CNN "Manufacturer"
+F 10 "1141777" H 6225 1100 50  0001 C CNN "Farnell Part Number"
+	1    6225 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD07222
+P 1900 950
+F 0 "TP?" H 1958 1070 50  0000 L CNN
+F 1 "TP_12V" H 1958 979 50  0000 L CNN
+F 2 "Cooler:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded" H 2100 950 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1969233.pdf?_ga=2.33043386.525084042.1540039739-1978019988.1540039739" H 2100 950 50  0001 C CNN
+F 4 "5122" H 1900 950 50  0001 C CNN "Part Number"
+F 5 "Keystone" H 1900 950 50  0001 C CNN "Manufacturer"
+F 6 "2501307" H 1900 950 50  0001 C CNN "Farnell Part Number"
+	1    1900 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD07427
+P 1900 1350
+F 0 "TP?" H 1958 1470 50  0000 L CNN
+F 1 "TP_12V_ADC" H 1958 1379 50  0000 L CNN
+F 2 "Cooler:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded" H 2100 1350 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1969233.pdf?_ga=2.33043386.525084042.1540039739-1978019988.1540039739" H 2100 1350 50  0001 C CNN
+F 4 "5122" H 1900 1350 50  0001 C CNN "Part Number"
+F 5 "Keystone" H 1900 1350 50  0001 C CNN "Manufacturer"
+F 6 "2501307" H 1900 1350 50  0001 C CNN "Farnell Part Number"
+	1    1900 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD07C54
+P 4900 1650
+F 0 "TP?" H 4958 1770 50  0000 L CNN
+F 1 "TP_VCC_POWER" H 4958 1679 50  0000 L CNN
+F 2 "Cooler:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded" H 5100 1650 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1969233.pdf?_ga=2.33043386.525084042.1540039739-1978019988.1540039739" H 5100 1650 50  0001 C CNN
+F 4 "5122" H 4900 1650 50  0001 C CNN "Part Number"
+F 5 "Keystone" H 4900 1650 50  0001 C CNN "Manufacturer"
+F 6 "2501307" H 4900 1650 50  0001 C CNN "Farnell Part Number"
+	1    4900 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD07F47
+P 5075 2250
+F 0 "TP?" H 5133 2370 50  0000 L CNN
+F 1 "TP_VCC_POWER_ADC" H 5133 2279 50  0000 L CNN
+F 2 "Cooler:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded" H 5275 2250 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1969233.pdf?_ga=2.33043386.525084042.1540039739-1978019988.1540039739" H 5275 2250 50  0001 C CNN
+F 4 "5122" H 5075 2250 50  0001 C CNN "Part Number"
+F 5 "Keystone" H 5075 2250 50  0001 C CNN "Manufacturer"
+F 6 "2501307" H 5075 2250 50  0001 C CNN "Farnell Part Number"
+	1    5075 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD085A1
+P 8050 2250
+F 0 "TP?" H 8108 2370 50  0000 L CNN
+F 1 "TP_COLD_HOT_READ" H 8108 2279 50  0000 L CNN
+F 2 "Cooler:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded" H 8250 2250 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1969233.pdf?_ga=2.33043386.525084042.1540039739-1978019988.1540039739" H 8250 2250 50  0001 C CNN
+F 4 "5122" H 8050 2250 50  0001 C CNN "Part Number"
+F 5 "Keystone" H 8050 2250 50  0001 C CNN "Manufacturer"
+F 6 "2501307" H 8050 2250 50  0001 C CNN "Farnell Part Number"
+	1    8050 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD08ABB
+P 3075 4000
+F 0 "TP?" H 3133 4120 50  0000 L CNN
+F 1 "TP_PWM_IN" H 3133 4029 50  0000 L CNN
+F 2 "Cooler:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded" H 3275 4000 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1969233.pdf?_ga=2.33043386.525084042.1540039739-1978019988.1540039739" H 3275 4000 50  0001 C CNN
+F 4 "5122" H 3075 4000 50  0001 C CNN "Part Number"
+F 5 "Keystone" H 3075 4000 50  0001 C CNN "Manufacturer"
+F 6 "2501307" H 3075 4000 50  0001 C CNN "Farnell Part Number"
+	1    3075 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L cooler:C C?
+U 1 1 5BD09604
+P 5325 3825
+F 0 "C?" V 5450 4025 50  0000 C CNN
+F 1 "10nF" V 5375 3975 50  0000 C CNN
+F 2 "Cooler:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 5363 3675 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1884706.pdf?_ga=2.162413496.525084042.1540039739-1978019988.1540039739" H 5325 3825 50  0001 C CNN
+F 4 "TH" H 5425 3625 50  0001 C CNN "Type"
+F 5 "50V" H 5625 3625 50  0001 C CNN "Voltage"
+F 6 "20%" H 5825 3625 50  0001 C CNN "Tolerance"
+F 7 "Y5V" H 5975 3625 50  0001 C CNN "Dielectric type"
+F 8 "MC0805Y103M500A5.08MM" H 5325 3825 50  0001 C CNN "Part Number"
+F 9 "Multicomp" H 5325 3825 50  0001 C CNN "Manufacturer"
+F 10 "2309024" H 5325 3825 50  0001 C CNN "Farnell Part Number"
+	1    5325 3825
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD0A260
+P 6250 3650
+F 0 "TP?" H 6308 3770 50  0000 L CNN
+F 1 "TP_MOSFET_DRAIN" H 6308 3679 50  0000 L CNN
+F 2 "Cooler:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded" H 6450 3650 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1969233.pdf?_ga=2.33043386.525084042.1540039739-1978019988.1540039739" H 6450 3650 50  0001 C CNN
+F 4 "5122" H 6250 3650 50  0001 C CNN "Part Number"
+F 5 "Keystone" H 6250 3650 50  0001 C CNN "Manufacturer"
+F 6 "2501307" H 6250 3650 50  0001 C CNN "Farnell Part Number"
+	1    6250 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD0A4C9
+P 5400 4200
+F 0 "TP?" H 5458 4320 50  0000 L CNN
+F 1 "TP_MOSFET_GATE" H 5458 4229 50  0000 L CNN
+F 2 "Cooler:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded" H 5600 4200 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1969233.pdf?_ga=2.33043386.525084042.1540039739-1978019988.1540039739" H 5600 4200 50  0001 C CNN
+F 4 "5122" H 5400 4200 50  0001 C CNN "Part Number"
+F 5 "Keystone" H 5400 4200 50  0001 C CNN "Manufacturer"
+F 6 "2501307" H 5400 4200 50  0001 C CNN "Farnell Part Number"
+	1    5400 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD0B3D9
+P 8850 3275
+F 0 "TP?" H 8908 3395 50  0000 L CNN
+F 1 "TP_TEC_HIGH_SIDE" H 8908 3304 50  0000 L CNN
+F 2 "Cooler:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded" H 9050 3275 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1969233.pdf?_ga=2.33043386.525084042.1540039739-1978019988.1540039739" H 9050 3275 50  0001 C CNN
+F 4 "5122" H 8850 3275 50  0001 C CNN "Part Number"
+F 5 "Keystone" H 8850 3275 50  0001 C CNN "Manufacturer"
+F 6 "2501307" H 8850 3275 50  0001 C CNN "Farnell Part Number"
+	1    8850 3275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3800 8850 3800
+Wire Wire Line
+	8775 3900 8925 3900
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD1FEF4
+P 8925 3500
+F 0 "TP?" H 8983 3620 50  0000 L CNN
+F 1 "TP_TEC_LOW_SIDE" H 8983 3529 50  0000 L CNN
+F 2 "Cooler:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded" H 9125 3500 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1969233.pdf?_ga=2.33043386.525084042.1540039739-1978019988.1540039739" H 9125 3500 50  0001 C CNN
+F 4 "5122" H 8925 3500 50  0001 C CNN "Part Number"
+F 5 "Keystone" H 8925 3500 50  0001 C CNN "Manufacturer"
+F 6 "2501307" H 8925 3500 50  0001 C CNN "Farnell Part Number"
+	1    8925 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 3275 8850 3800
+Connection ~ 8850 3800
+Wire Wire Line
+	8850 3800 9050 3800
+Wire Wire Line
+	8925 3500 8925 3900
+Connection ~ 8925 3900
+Wire Wire Line
+	8925 3900 9050 3900
+$Comp
+L Device:D D?
+U 1 1 5BD2E857
+P 6625 1350
+F 0 "D?" V 6579 1429 50  0000 L CNN
+F 1 "1N4004" V 6670 1429 50  0000 L CNN
+F 2 "Cooler:D_DO-41_SOD81_P10.16mm_Horizontal" H 6625 1350 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/574765.pdf?_ga=2.196473768.525084042.1540039739-1978019988.1540039739" H 6625 1350 50  0001 C CNN
+F 4 "1N4004" V 6625 1350 50  0001 C CNN "Part Number"
+F 5 "Multicomp" V 6625 1350 50  0001 C CNN "Manufacturer"
+F 6 "9565027" V 6625 1350 50  0001 C CNN "Farnell Part Number"
+	1    6625 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L cooler:R R?
+U 1 1 5BD2F4C7
+P 3500 2150
+F 0 "R?" H 3350 2200 50  0000 L CNN
+F 1 "100K" V 3500 2050 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3430 2150 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 3580 2150 50  0001 C CNN
+F 4 "THD" H 3650 2050 50  0001 C CNN "Type"
+F 5 "1/4 W" H 3850 2050 50  0001 C CNN "Power"
+F 6 "1%" H 4100 2050 50  0001 C CNN "Tolerance"
+F 7 "MF25 100K" H 3500 2150 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 3500 2150 50  0001 C CNN "Manufacturer"
+F 9 "9341129" H 3500 2150 50  0001 C CNN "Farnell Part Number"
+	1    3500 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L cooler:R R?
+U 1 1 5BD2FBD9
+P 3300 1900
+F 0 "R?" V 3400 1925 50  0000 L CNN
+F 1 "100" V 3300 1825 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3230 1900 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 3380 1900 50  0001 C CNN
+F 4 "THD" H 3450 1800 50  0001 C CNN "Type"
+F 5 "1/4 W" H 3650 1800 50  0001 C CNN "Power"
+F 6 "1%" H 3900 1800 50  0001 C CNN "Tolerance"
+F 7 "MF25 100R" H 3300 1900 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 3300 1900 50  0001 C CNN "Manufacturer"
+F 9 "9341099" H 3300 1900 50  0001 C CNN "Farnell Part Number"
+	1    3300 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L cooler:R R?
+U 1 1 5BD309AE
+P 4300 2050
+F 0 "R?" H 4150 2125 50  0000 L CNN
+F 1 "3K3" V 4300 1975 50  0000 L CNN
+F 2 "Cooler:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4230 2050 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 4380 2050 50  0001 C CNN
+F 4 "THD" H 4450 1950 50  0001 C CNN "Type"
+F 5 "1/4 W" H 4650 1950 50  0001 C CNN "Power"
+F 6 "1%" H 4900 1950 50  0001 C CNN "Tolerance"
+F 7 "MF25 3K3" H 4300 2050 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 4300 2050 50  0001 C CNN "Manufacturer"
+F 9 "9341749" H 4300 2050 50  0001 C CNN "Farnell Part Number"
+	1    4300 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q?
+U 1 1 5BCEA23A
+P 7125 1900
+F 0 "Q?" H 7300 1775 50  0000 L CNN
+F 1 "BC547" H 7300 1675 50  0000 L CNN
+F 2 "Cooler:TO-92_Inline_Narrow_Oval" H 7325 1825 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 7125 1900 50  0001 L CNN
+F 4 "BC547B" H 7125 1900 50  0001 C CNN "Part Number"
+F 5 "Multicomp" H 7125 1900 50  0001 C CNN "Manufacturer"
+F 6 "1574381" H 7125 1900 50  0001 C CNN "Farnell Part Number"
+	1    7125 1900
+	1    0    0    -1  
+$EndComp
+Connection ~ 6925 1900
+$Comp
+L cooler:R R?
+U 1 1 5BCEA327
+P 6725 1900
+F 0 "R?" V 6825 1925 50  0000 L CNN
+F 1 "5K6" V 6725 1825 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6655 1900 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 6805 1900 50  0001 C CNN
+F 4 "THD" H 6875 1800 50  0001 C CNN "Type"
+F 5 "1/4 W" H 7075 1800 50  0001 C CNN "Power"
+F 6 "1%" H 7325 1800 50  0001 C CNN "Tolerance"
+F 7 "MF25 5K6" H 6725 1900 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 6725 1900 50  0001 C CNN "Manufacturer"
+F 9 "9342060" H 6725 1900 50  0001 C CNN "Farnell Part Number"
+	1    6725 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L cooler:R R?
+U 1 1 5BCEA423
+P 6925 2150
+F 0 "R?" H 6775 2200 50  0000 L CNN
+F 1 "100K" V 6925 2050 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6855 2150 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 7005 2150 50  0001 C CNN
+F 4 "THD" H 7075 2050 50  0001 C CNN "Type"
+F 5 "1/4 W" H 7275 2050 50  0001 C CNN "Power"
+F 6 "1%" H 7525 2050 50  0001 C CNN "Tolerance"
+F 7 "MF25 100K" H 6925 2150 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 6925 2150 50  0001 C CNN "Manufacturer"
+F 9 "9341129" H 6925 2150 50  0001 C CNN "Farnell Part Number"
+	1    6925 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L cooler:R R?
+U 1 1 5BCEA5F7
+P 7875 2100
+F 0 "R?" H 7725 2150 50  0000 L CNN
+F 1 "100K" V 7875 2000 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7805 2100 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 7955 2100 50  0001 C CNN
+F 4 "THD" H 8025 2000 50  0001 C CNN "Type"
+F 5 "1/4 W" H 8225 2000 50  0001 C CNN "Power"
+F 6 "1%" H 8475 2000 50  0001 C CNN "Tolerance"
+F 7 "MF25 100K" H 7875 2100 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 7875 2100 50  0001 C CNN "Manufacturer"
+F 9 "9341129" H 7875 2100 50  0001 C CNN "Farnell Part Number"
+	1    7875 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L cooler:R R?
+U 1 1 5BCEA69D
+P 7875 2425
+F 0 "R?" H 7725 2475 50  0000 L CNN
+F 1 "12K" V 7875 2350 50  0000 L CNN
+F 2 "Cooler:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7805 2425 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 7955 2425 50  0001 C CNN
+F 4 "THD" H 8025 2325 50  0001 C CNN "Type"
+F 5 "1/4 W" H 8225 2325 50  0001 C CNN "Power"
+F 6 "1%" H 8475 2325 50  0001 C CNN "Tolerance"
+F 7 "MF25 12K" H 7875 2425 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 7875 2425 50  0001 C CNN "Manufacturer"
+F 9 "9341234" H 7875 2425 50  0001 C CNN "Farnell Part Number"
+	1    7875 2425
+	1    0    0    -1  
+$EndComp
+$Comp
+L cooler:C C?
+U 1 1 5BCEA74E
+P 7575 2425
+F 0 "C?" H 7625 2325 50  0000 C CNN
+F 1 "10nF" H 7675 2525 50  0000 C CNN
+F 2 "Cooler:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 7613 2275 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1884706.pdf?_ga=2.162413496.525084042.1540039739-1978019988.1540039739" H 7575 2425 50  0001 C CNN
+F 4 "TH" H 7675 2225 50  0001 C CNN "Type"
+F 5 "50V" H 7875 2225 50  0001 C CNN "Voltage"
+F 6 "20%" H 8075 2225 50  0001 C CNN "Tolerance"
+F 7 "Y5V" H 8225 2225 50  0001 C CNN "Dielectric type"
+F 8 "MC0805Y103M500A5.08MM" H 7575 2425 50  0001 C CNN "Part Number"
+F 9 "Multicomp" H 7575 2425 50  0001 C CNN "Manufacturer"
+F 10 "2309024" H 7575 2425 50  0001 C CNN "Farnell Part Number"
+	1    7575 2425
+	-1   0    0    1   
+$EndComp
+$Comp
+L cooler:Conn_01x02_Male J?
+U 1 1 5BCFED8A
+P 675 4000
+F 0 "J?" H 675 4100 50  0000 C CNN
+F 1 "FAN 2" H 725 3800 50  0000 C CNN
+F 2 "Cooler:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 475 3600 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eVH.pdf" H 675 4000 50  0001 C CNN
+F 4 "JST_Male_Vertical_1x2_3.96mm" H 775 3700 50  0001 C CNN "Type"
+	1    675  4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L cooler:Conn_01x02_Male J?
+U 1 1 5BCFEE3C
+P 675 4450
+F 0 "J?" H 675 4550 50  0000 C CNN
+F 1 "FAN 3" H 725 4250 50  0000 C CNN
+F 2 "Cooler:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 475 4050 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eVH.pdf" H 675 4450 50  0001 C CNN
+F 4 "JST_Male_Vertical_1x2_3.96mm" H 775 4150 50  0001 C CNN "Type"
+	1    675  4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:FINDER-41.52 K?
+U 1 1 5BB001F0
+P 4200 1300
+F 0 "K?" H 4950 1100 50  0000 R CNN
+F 1 "SCHRACK420012" H 5450 1200 50  0000 R CNN
+F 2 "Cooler:Relay_SPDT_Schrack-RT1-16A-FormC_RM5mm" H 5550 1270 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1922665.pdf?_ga=2.267851402.525084042.1540039739-1978019988.1540039739" H 4000 1300 50  0001 C CNN
+F 4 "RP420012" H 4200 1300 50  0001 C CNN "Part Number"
+F 5 "SCHRACK" H 4200 1300 50  0001 C CNN "Manufacturer"
+F 6 "3103330" H 4200 1300 50  0001 C CNN "Farnell Part Number"
+	1    4200 1300
+	1    0    0    1   
+$EndComp
+$Comp
+L Relay:FINDER-41.52 K?
+U 1 1 5BD00515
+P 7625 1300
+F 0 "K?" H 8375 1100 50  0000 R CNN
+F 1 "SCHRACK420012" H 8875 1200 50  0000 R CNN
+F 2 "Cooler:Relay_SPDT_Schrack-RT1-16A-FormC_RM5mm" H 8975 1270 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1922665.pdf?_ga=2.267851402.525084042.1540039739-1978019988.1540039739" H 7425 1300 50  0001 C CNN
+F 4 "RP420012" H 7625 1300 50  0001 C CNN "Part Number"
+F 5 "SCHRACK" H 7625 1300 50  0001 C CNN "Manufacturer"
+F 6 "3103330" H 7625 1300 50  0001 C CNN "Farnell Part Number"
+	1    7625 1300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3400 3325 3550 3325
+Wire Notes Line
+	3425 3250 4300 3250
+Wire Notes Line
+	3425 3900 4300 3900
+Connection ~ 3550 3325
+$Comp
+L power:GND #PWR?
+U 1 1 5BD39670
+P 3825 3675
+F 0 "#PWR?" H 3825 3425 50  0001 C CNN
+F 1 "GND" H 3830 3502 50  0000 C CNN
+F 2 "" H 3825 3675 50  0001 C CNN
+F 3 "" H 3825 3675 50  0001 C CNN
+	1    3825 3675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3825 3625 3825 3675
+$Comp
+L cooler:C C?
+U 1 1 5BD40B31
+P 3825 3475
+F 0 "C?" H 3875 3575 50  0000 L CNN
+F 1 "100nF" H 3850 3350 50  0000 L CNN
+F 2 "Cooler:C_0603" H 3863 3325 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2340522.pdf?_ga=2.267336586.525084042.1540039739-1978019988.1540039739" H 3825 3475 50  0001 C CNN
+F 4 "SMD" H 3925 3275 50  0001 C CNN "Type"
+F 5 "25V" H 4125 3275 50  0001 C CNN "Voltage"
+F 6 "10%" H 4325 3275 50  0001 C CNN "Tolerance"
+F 7 "X7R" H 4475 3275 50  0001 C CNN "Dielectric type"
+F 8 "0603B104M250CT" H 3825 3475 50  0001 C CNN "Part Number"
+F 9 "WALSIN" H 3825 3475 50  0001 C CNN "Manufacturer"
+F 10 "2524818" H 3825 3475 50  0001 C CNN "Farnell Part Number"
+	1    3825 3475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3325 3825 3325
+Connection ~ 3825 3325
+Wire Wire Line
+	3825 3325 4100 3325
+$Comp
+L cooler:C C?
+U 1 1 5BD41432
+P 4100 3475
+F 0 "C?" H 4150 3575 50  0000 L CNN
+F 1 "100nF" H 4125 3350 50  0000 L CNN
+F 2 "Cooler:C_0603" H 4138 3325 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2340522.pdf?_ga=2.267336586.525084042.1540039739-1978019988.1540039739" H 4100 3475 50  0001 C CNN
+F 4 "SMD" H 4200 3275 50  0001 C CNN "Type"
+F 5 "25V" H 4400 3275 50  0001 C CNN "Voltage"
+F 6 "10%" H 4600 3275 50  0001 C CNN "Tolerance"
+F 7 "X7R" H 4750 3275 50  0001 C CNN "Dielectric type"
+F 8 "0603B104M250CT" H 4100 3475 50  0001 C CNN "Part Number"
+F 9 "WALSIN" H 4100 3475 50  0001 C CNN "Manufacturer"
+F 10 "2524818" H 4100 3475 50  0001 C CNN "Farnell Part Number"
+	1    4100 3475
+	1    0    0    -1  
+$EndComp
+Connection ~ 4100 3325
+Wire Wire Line
+	4100 3325 4400 3325
+Wire Wire Line
+	3825 4050 4150 4050
+Wire Wire Line
+	4150 4050 4350 4050
+Connection ~ 4150 4050
+$Comp
+L cooler:C C?
+U 1 1 5BC743BF
+P 4150 4200
+F 0 "C?" H 4225 4125 50  0000 C CNN
+F 1 "C" H 4200 4300 50  0000 C CNN
+F 2 "" H 4188 4050 50  0001 C CNN
+F 3 "~" H 4150 4200 50  0001 C CNN
+F 4 "SMD" H 4250 4000 50  0001 C CNN "Type"
+F 5 "100V" H 4450 4000 50  0001 C CNN "Voltage"
+F 6 "1%" H 4650 4000 50  0001 C CNN "Tolerance"
+F 7 "X7R" H 4800 4000 50  0001 C CNN "Dielectric type"
+	1    4150 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L cooler:R R?
+U 1 1 5BD288FE
+P 5200 4225
+F 0 "R?" V 5100 4125 50  0000 L CNN
+F 1 "1" V 5200 4200 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5130 4225 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 5280 4225 50  0001 C CNN
+F 4 "THD" H 5350 4125 50  0001 C CNN "Type"
+F 5 "1/4 W" H 5550 4125 50  0001 C CNN "Power"
+F 6 "1%" H 5800 4125 50  0001 C CNN "Tolerance"
+F 7 "MF25 1R" H 5200 4225 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 5200 4225 50  0001 C CNN "Manufacturer"
+F 9 "9341153" H 5200 4225 50  0001 C CNN "Farnell Part Number"
+	1    5200 4225
+	0    1    1    0   
+$EndComp
+$Comp
+L cooler:CP C?
+U 1 1 5BD2A2F6
+P 4625 3475
+F 0 "C?" H 4675 3575 50  0000 L CNN
+F 1 "220uF" H 4650 3375 50  0000 L CNN
+F 2 "Cooler:CP_Radial_D10.0mm_P5.00mm" H 4663 3325 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2045658.pdf?_ga=2.232798746.525084042.1540039739-1978019988.1540039739" H 4625 3475 50  0001 C CNN
+F 4 "TH" H 4625 3475 50  0001 C CNN "Type"
+F 5 "50V" H 4825 3575 50  0001 C CNN "Voltage"
+F 6 "20%" H 4825 3475 50  0001 C CNN "Tolerance"
+F 7 "Electrolytic" H 4825 3375 50  0001 C CNN "Dielectric type"
+F 8 "MCKSK050M221G17S" H 4625 3475 50  0001 C CNN "Part Number"
+F 9 "Multicomp" H 4625 3475 50  0001 C CNN "Manufacturer"
+F 10 "2610803" H 4625 3475 50  0001 C CNN "Farnell Part Number"
+	1    4625 3475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3325 4625 3325
+Connection ~ 4625 3325
+Wire Wire Line
+	4625 3325 4950 3325
+$Comp
+L cooler:CP C?
+U 1 1 5BD2AF59
+P 4950 3475
+F 0 "C?" H 5000 3575 50  0000 L CNN
+F 1 "220uF" H 4975 3375 50  0000 L CNN
+F 2 "Cooler:CP_Radial_D10.0mm_P5.00mm" H 4988 3325 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2045658.pdf?_ga=2.232798746.525084042.1540039739-1978019988.1540039739" H 4950 3475 50  0001 C CNN
+F 4 "TH" H 4950 3475 50  0001 C CNN "Type"
+F 5 "50V" H 5150 3575 50  0001 C CNN "Voltage"
+F 6 "20%" H 5150 3475 50  0001 C CNN "Tolerance"
+F 7 "Electrolytic" H 5150 3375 50  0001 C CNN "Dielectric type"
+F 8 "MCKSK050M221G17S" H 4950 3475 50  0001 C CNN "Part Number"
+F 9 "Multicomp" H 4950 3475 50  0001 C CNN "Manufacturer"
+F 10 "2610803" H 4950 3475 50  0001 C CNN "Farnell Part Number"
+	1    4950 3475
+	1    0    0    -1  
+$EndComp
+Connection ~ 4950 3325
+Wire Wire Line
+	4950 3325 5825 3325
+$Comp
+L cooler:R R?
+U 1 1 5BD2B294
+P 5675 3825
+F 0 "R?" V 5775 3850 50  0000 L CNN
+F 1 "100" V 5675 3750 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5605 3825 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1716726.pdf?_ga=2.228564761.525084042.1540039739-1978019988.1540039739" V 5755 3825 50  0001 C CNN
+F 4 "THD" H 5825 3725 50  0001 C CNN "Type"
+F 5 "1/4 W" H 6025 3725 50  0001 C CNN "Power"
+F 6 "1%" H 6275 3725 50  0001 C CNN "Tolerance"
+F 7 "MF25 100R" H 5675 3825 50  0001 C CNN "Part Number"
+F 8 "Multicomp" H 5675 3825 50  0001 C CNN "Manufacturer"
+F 9 "9341099" H 5675 3825 50  0001 C CNN "Farnell Part Number"
+	1    5675 3825
+	0    -1   -1   0   
+$EndComp
+Connection ~ 5825 3825
+$Comp
+L cooler:CP C?
+U 1 1 5BD2DF69
+P 7050 4150
+F 0 "C?" H 7100 4250 50  0000 L CNN
+F 1 "2200uF" H 7075 4050 50  0000 L CNN
+F 2 "Cooler:CP_Radial_D10.0mm_P5.00mm" H 7088 4000 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2321304.pdf?_ga=2.143503349.1986230214.1540489304-1550211954.1540489304" H 7050 4150 50  0001 C CNN
+F 4 "TH" H 7050 4150 50  0001 C CNN "Type"
+F 5 "35V" H 7250 4250 50  0001 C CNN "Voltage"
+F 6 "20%" H 7250 4150 50  0001 C CNN "Tolerance"
+F 7 "Electrolytic" H 7250 4050 50  0001 C CNN "Dielectric type"
+F 8 "35YXF2200MEFC16X31.5" H 7050 4150 50  0001 C CNN "Part Number"
+F 9 "RUBYCON" H 7050 4150 50  0001 C CNN "Manufacturer"
+F 10 "1144631" H 7050 4150 50  0001 C CNN "Farnell Part Number"
+	1    7050 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L cooler:Screw_Terminal_01x02 J?
+U 1 1 5BD2F0B7
+P 9250 3800
+F 0 "J?" H 9275 3925 50  0000 C CNN
+F 1 "TEC Terminal" H 9225 3575 50  0000 C CNN
+F 2 "Cooler:TerminalBlock_bornier-2_P5.08mm" H 9400 3500 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1955144.pdf?_ga=2.188216492.525084042.1540039739-1978019988.1540039739" H 9250 3900 50  0001 C CNN
+F 4 "CTB0102/2" H 9250 3800 50  0001 C CNN "Part Number"
+F 5 "Camdemboss" H 9250 3800 50  0001 C CNN "Manufacturer"
+F 6 "2493614" H 9250 3800 50  0001 C CNN "Farnell Part Number"
+	1    9250 3800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

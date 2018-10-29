@@ -1,4 +1,4 @@
-(module TerminalBlock_bornier-2_P5.08mm (layer F.Cu) (tedit 59FF03AB)
+(module TerminalBlock_bornier-2_P5.08mm (layer F.Cu) (tedit 5BCB1EAC)
   (descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
   (tags "terminal block bornier2")
   (fp_text reference REF** (at 2.54 -5.08) (layer F.SilkS)
@@ -30,5 +30,10 @@
     (offset (xyz 2.539999961853027 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
+  )
+  (model ${KIPRJMOD}/LIB/3D/79245193-19-terminal_blocks_a-tb500vi02h/terminal_blocks_a-tb500vi02h.stp
+    (offset (xyz 2.5 4.5 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
   )
 )
