@@ -465,12 +465,12 @@ L Transistor_FET:IRF540N Q?
 U 1 1 5BBE7F57
 P 6150 4225
 F 0 "Q?" H 6355 4271 50  0000 L CNN
-F 1 "STP60NF06" H 6355 4180 50  0000 L CNN
+F 1 "STP80NF55-06" H 6355 4180 50  0000 L CNN
 F 2 "Cooler:TO-220-3_Vertical" H 6400 4150 50  0001 L CIN
 F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 6150 4225 50  0001 L CNN
-F 4 "STP60NF06" H 6150 4225 50  0001 C CNN "Part Number"
+F 4 "STP80NF55-06" H 6150 4225 50  0001 C CNN "Part Number"
 F 5 "ST" H 6150 4225 50  0001 C CNN "Manufacturer"
-F 6 "9803262" H 6150 4225 50  0001 C CNN "Farnell Part Number"
+F 6 "1291987" H 6150 4225 50  0001 C CNN "Farnell Part Number"
 	1    6150 4225
 	1    0    0    -1  
 $EndComp
